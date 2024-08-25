@@ -18,9 +18,8 @@ string_info('Katerina')
 def is_contrains(string, list_to_search):
     for i in range(len(list_to_search)):
         if list_to_search[i].lower() == string.lower():
-            a = True
-            break
-        elif list_to_search[i].lower() != string.lower():
+            print(True)
+        else:
             print(False)
     count_calls()
 
