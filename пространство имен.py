@@ -7,25 +7,23 @@ def count_calls():
 
 
 def string_info(string):
-    print([len(string), string.lower(), string.upper()])
     count_calls()
+    return len(string), string.lower(), string.upper()
 
 
-string_info('Musk')
-string_info('Katerina')
+print(string_info('Musk'))
+print(string_info('Katerina'))
 
 
 def is_contrains(string, list_to_search):
-    for i in range(len(list_to_search)):
-        if list_to_search[i].lower() == string.lower():
-            print(True)
-        else:
-            print(False)
     count_calls()
+    string = string.lower()
+    for element in list_to_search:
+        if element.lower() == string:
+            return True
+    return False
 
 
-is_contrains('katerina', ['love', 'kiss', 'katERina'])
-is_contrains('Raccoon', ['liVE', 'klass', 'listiNg'])
-
-
+print(is_contrains('katerina', ['love', 'kiss', 'katERina']))
+print(is_contrains('Raccoon', ['liVE', 'klass', 'listiNg']))
 print(calls)
